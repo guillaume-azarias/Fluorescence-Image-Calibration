@@ -1,5 +1,9 @@
 ### Data ###
 *.csv
+*.xlsx
+*.key
+*.tif
+*.tiff
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

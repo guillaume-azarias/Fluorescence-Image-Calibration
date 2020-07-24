@@ -3,22 +3,24 @@
  * 
  * Step 1: 	The macro "a_High Quality Images" makes a Z-stack average of images 
  *          	to improve the images used by CellProfiler.
- * Step 2: 	The CellProfiler pipeline "b_Cell Segment" segments
+ * Step 2: 	The CellProfiler pipeline "b_Cell Segmentation" segments
  *          	the cells and identify the cell-specific mitochondrial regions.
- * Step 4: 	The Fiji macro "c_Composite Images" creates a composite of
- *          	a stack of probe images merged with the result of CP mitochondria regions.
- * Step 5 	The CellProfiler pipeline "d_Intensity Measurement" loops the intensity measurement
+ * Step 3: 	The Fiji macro "c_Composite Calibrated Images" creates a composite of
+ *          	a stack of calibrated probe images merged with the result of CP mitochondria.
+ *       		regions. In the calibrated version, the pixel values are converted to calibrated
+ *       		values. Note that the NaN (e.g. for pixels located outside of cell
+ * 				regions) cannot be exported in a 16-bit tiff format. Therefore, apply
+ * 				a threshold to exclude 0-intensity pixels when applying d_Intensity Measurement.
+ * Step 4: 	The CellProfiler pipeline "d_Intensity Measurement" loops the intensity measurement
  *          	of cell-specific mitochondria regions and exports it in a Excel file.
- *          	Note that the CP stack is set to 61 images. Modify the code or make it
- *          	adaptive if relevant
  *
  * Technical notes:
- * Step 1: 	Make sure that your images are in a two-digit format.
- * Step 2:	The CellProfiler segmentation works better works better if you substract 
+ *		Make sure that your images named with two-digit number.
+ *		The CellProfiler segmentation works better works better if you substract 
  * 			the background, even if, optically, the cells appear easier to segment
  * 			without background substraction.
- * Step 4: 	The structure of the folder is important: it must be in the 
- * 			following order: first the mito-outlines.tiff file, then the Big King
+ * 		The structure of the folder is important: it must be in the 
+ * 			following order: first the mito-outlines.tiff file, then the processed images
  * 			result and finally the series of experimental images.
  * 			
  * version 2017 04 13. guillaume.azarias@hotmail.com
