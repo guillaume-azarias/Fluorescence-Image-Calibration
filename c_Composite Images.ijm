@@ -1,11 +1,11 @@
 /*
  * General workflow:
  * 
- * Step 1: 	The macro "a_Data Loading" makes a Z-stack average of images 
+ * Step 1: 	The macro "a_High Quality Images" makes a Z-stack average of images 
  *          	to improve the images used by CellProfiler.
- * Step 2: 	The CellProfiler pipeline "b_Astro Segment" segments
+ * Step 2: 	The CellProfiler pipeline "b_Cell Segment" segments
  *          	the cells and identify the cell-specific mitochondrial regions.
- * Step 4: 	The Fiji macro "c_Composite Image" creates a composite of
+ * Step 4: 	The Fiji macro "c_Composite Images" creates a composite of
  *          	a stack of probe images merged with the result of CP mitochondria regions.
  * Step 5 	The CellProfiler pipeline "d_Intensity Measurement" loops the intensity measurement
  *          	of cell-specific mitochondria regions and exports it in a Excel file.
@@ -31,7 +31,7 @@ if (isOpen("Log")) {
          run("Close"); 
      }
      
-showStatus("Welcome to Burger King: Big king")
+showStatus("Cell-to-cell heterogeneity quantification")
 
 
 // Select the input and output folders
@@ -108,7 +108,7 @@ else {
 }                     
 Dialog.addNumber("Interval between acquisitions (sec): ", 15);
 // Parameters
-Dialog.create("              The Burger King macro suite: Hamburger              ");
+Dialog.create("       Cell-to-cell heterogeneity quantification: Create composite images");
 Dialog.addMessage("Step 4/6: Do a composite stack of experimental and CP images\n              to loop the object measurements in CellProfiler.\n \nParameters:\n")
 Dialog.addNumber("                       Number of fields of view: ", 6);
 Dialog.addNumber("Number of experimental images per field of view: ", 99);
