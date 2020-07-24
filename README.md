@@ -9,6 +9,6 @@ Together, our results suggest that astrocytes organize in clusters of metabolica
 Introduction
 Cells are located in a dynamically changing environment characterized by spatio-temporel gradients of signaling molecules and physico-chemical constraints. Therefore, cells exhibit dramatically different shapes and metabolic activities. A striking example of the shape diversity of cells is for instance the dendritic arborization of neurons. Like trees, no one is the same as the others.
 In this work, we have investigated if non-neuronal cells called astrocytes produce cellular energy (Adenosine Tri-Phosphate) using the same metabolic pathway. For simplification, we considered only two of the most important metabolic pathways producing energy in cells: glycolysis and mitochondrial oxydative metabolism. Therefore, if in a population of astrocytes, they all produce energy using the same metabolic pathway:
-[Fig. 1](Figure_1.jpeg).
+![Fig. 1](Figure_1.jpeg).
 
 For this purpose, we monitored using fluorescence microspy several metabolic parameters in intact living astrocytes challenged by the transient stimulation by a molecule released by excitatory neurons.
