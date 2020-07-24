@@ -15,14 +15,23 @@ In this work, we have investigated if non-neuronal cells called astrocytes produ
 For this purpose, we monitored using fluorescence microspy several metabolic parameters in intact living astrocytes in several fields of view (**Fig. 2A**) challenged by the transient stimulation by a molecule released by excitatory neurons (**Fig.2B**). An automated image analysis pipeline enabled for the time-resolved quantification of energy metabolism parameters at the single-cell level (**Fig.2C**). 
 
 ![Fig. 2](Figure_2.jpeg)
-**Figure 2**: (A) Up to six fields of view are monitored per field of view, corresponding 250 to 1000 astrocytes per experiment. (B) Summary of experimental settings to evaluate the effect of glutamate on energy metabolism in cultured astrocytes. The same protocol was used for all experiments: after a baseline recording, astrocytes were stimulated 2min with Glutamate 200µM and recovering was monitored. The parameter-specific normalisation condition was then applied. (C) Analysis pipeline to infer sorted calibrated intensity plots from raw image data. For data visualisation, cells are sorted according to basal value (y axis) and the normalised intensity is color-coded and displayed along the time (x axis).
-
-![Fig. 3](Figure_3.jpeg)
-**Figure 3**: (A) Representation of relative ATP level measured using the Magnesium Green method and using metabolic inhibitor as a normalizing condition. (B) Color-coded representation of single cell dynamics. (C) Representative experiment and (D) whole dataset representation of variability index (interquartile range).
+**Figure 2**: (**A**) Up to six fields of view are monitored per field of view, corresponding 250 to 1000 astrocytes per experiment. (**B**) Summary of experimental settings to evaluate the effect of glutamate on energy metabolism in cultured astrocytes. The same protocol was used for all experiments: after a baseline recording, astrocytes were stimulated 2min with Glutamate 200µM and recovering was monitored. The parameter-specific normalisation condition was then applied. (**C**) Analysis pipeline to infer sorted calibrated intensity plots from raw image data. For data visualisation, cells are sorted according to basal value (y axis) and the normalised intensity is color-coded and displayed along the time (x axis).
 
 ## Results
 
-We found that, at resting state, astrocytes are heterogeneous in cellular ATP level, mitochondrial electrical potential and mitochondrial reactive oxygen species (ROS) concentration. A transient stimulation of astrocytes with the neurotransmitter glutamate induced a change in the variability in energy metabolism, characterized by a persistent, calcium-independent, decrease in the variability of cellular ATP level (**Fig. 3**), mitochondrial electrical potential and mitochondrial ROS concentration.
+We found that, at resting state, astrocytes are heterogeneous in cellular ATP level, mitochondrial electrical potential and mitochondrial reactive oxygen species (ROS) concentration. A transient stimulation of astrocytes with the neurotransmitter glutamate induced a change in the variability in energy metabolism, characterized by a persistent, calcium-independent, decrease in the variability of cellular ATP level (**Fig. 3** and **4**), mitochondrial electrical potential and mitochondrial ROS concentration (**Fig. 6**).
+
+![Fig. 3](Figure_3.jpeg)
+**Figure 3**: (**A**) Representation of relative ATP level measured using the Magnesium Green method and using metabolic inhibitor as a normalizing condition. (**B**) Color-coded representation of single cell dynamics. (**C**) Representative experiment and (**D**) whole dataset representation of variability index (interquartile range).
+
+![Fig. 4](Figure_4.jpeg)
+**Figure 4**: (**A**) Representation of the normalized ATP level and cytosolic calcium concentration measured using the Magnesium Green method imaged in cells simultaneously labeled with Fura-2. (**B**) Color-coded representation and (**B’**) cross correlation coefficients of single cell dynamics. (**C**) Representative experiment and (D) whole dataset representation of variability index.
+
+![Fig. 5](Figure_5.jpeg)
+**Figure 5**: (**5**) Representation of mitochondrial electrical potential measured using the Rhodamine 123 chemical dye and using the mitochondrial uncoupler as a normalizing condition. (**B**) Color-coded representation of single cell dynamic. (**C**) Representative experiment and (**D**) whole dataset representation of variability index.
+
+![Fig. 6](Figure_6.jpeg)
+**Figure 5**: (**A**) Representation of mitochondrial ROS concentration level measured using mito-roGFP2-Orp1 and using metabolic inhibitor as a normalizing condition. (**B**) Color-coded representation of single cell dynamics. (**C**) Representative experiment and (**D**) whole dataset representation of variability index.
 
 ## Outlook
 
