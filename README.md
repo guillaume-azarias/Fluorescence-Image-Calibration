@@ -20,7 +20,6 @@ For this purpose, we monitored using fluorescence microspy several metabolic par
 ![Fig. 3](Figure_3.jpeg)
 **Figure 3**: (A) Representation of relative ATP level measured using the Magnesium Green method and using metabolic inhibitor as a normalizing condition. (B) Color-coded representation of single cell dynamics. (C) Representative experiment and (D) whole dataset representation of variability index (interquartile range).
 
-
 ## Results
 
 We found that, at resting state, astrocytes are heterogeneous in cellular ATP level, mitochondrial electrical potential and mitochondrial reactive oxygen species (ROS) concentration. A transient stimulation of astrocytes with the neurotransmitter glutamate induced a change in the variability in energy metabolism, characterized by a persistent, calcium-independent, decrease in the variability of cellular ATP level (**Fig. 3**), mitochondrial electrical potential and mitochondrial ROS concentration.
