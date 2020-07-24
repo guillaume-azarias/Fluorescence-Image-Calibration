@@ -43,10 +43,23 @@ Together, our results suggest that astrocytes organize in clusters of metabolica
 
 ## Code
 
-Workflow: The Figure 7 illustrates the analysis pipeline to infer sorted calibrated intensity plots from raw image data. For data visualisation, cells are sorted according to basal value (y axis) and the normalised intensity is color-coded and displayed along the time (x axis).
+### Workflow
+
+The Figure 7 illustrates the analysis pipeline to infer sorted calibrated intensity plots from raw image data. For data visualisation, cells are sorted according to basal value (y axis) and the normalised intensity is color-coded and displayed along the time (x axis).
 
 ![Fig. 7](Figure_7.jpeg)
 **Figure 7**: Analysis pipeline.
+
+### Prerequisites
+
+Data format: The imaging data were stored as tif files
+Data names: Make sure that your data names contain *two-digits numbers* to allow for time series analysis.
+
+### Macros
+
+#### High quality images for segmentation
+
+
 
 ## Acknowledgments
 
