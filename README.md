@@ -5,7 +5,8 @@
 ## Biological background
 
 Cells are located in a dynamically changing environment characterized by spatio-temporel gradients of signaling molecules and physico-chemical constraints. Therefore, cells exhibit dramatically different shapes and metabolic activities. A striking example of the shape diversity of cells is for instance the dendritic arborization of neurons. Like trees, no one is the same as the others.
-In this work, we have investigated if non-neuronal cells called astrocytes produce cellular energy (ATP or Adenosine TriPhosphate) using the same metabolic pathway. For simplification, we considered only two of the most important metabolic pathways producing energy in cells: glycolysis and mitochondrial oxydative metabolism. Therefore, we addressed if in a population of astrocytes, they all produce energy using the same metabolic pathway:
+
+In this work, we have investigated if non-neuronal cells called astrocytes produce cellular energy ([ATP](https://en.wikipedia.org/wiki/Adenosine_triphosphate) or Adenosine TriPhosphate) using the same metabolic pathway. For simplification, we considered only two of the most important metabolic pathways producing energy in cells: [glycolysis](https://en.wikipedia.org/wiki/Glycolysis) and [mitochondrial oxydative phosphorylation](https://en.wikipedia.org/wiki/Oxidative_phosphorylation). Therefore, we addressed if in a population of astrocytes, they all produce energy using the same metabolic pathways:
 
 ![Fig. 1](Figure_1.jpeg)
 **Figure 1**: Rationale of the cell-to-cell heterogeneity study.
