@@ -13,12 +13,12 @@ In this work, we have investigated if non-neuronal cells called astrocytes produ
 
 ## Methods
 
-*Foreword: The goal of this repository is to illustrate how to convert raw imaging data, containing hundreds of cells, into calibrated data that can be stastically studied. The biological relevance is not discussed.*
+*Foreword: The goal of this repository is to illustrate how to convert raw imaging data, containing hundreds of cells, into calibrated data that can be statistically studied. The biological relevance is not discussed.*
 
-We monitored, using widefield fluorescence microscopy, several metabolic parameters in intact living astrocytes in several fields of view (**Fig. 2A**) and challenged by a transient stimulation using Glutamate, a molecule released by most of the excitatory neurons (**Fig.2B**). To identify and normalize or calibrate individual individual, you need to acquire at least two channels: 1) The fluorescence biosensor channel(s) and 2) A spectrally separable probe for the nuclei. In this study, we used a far-red dye for living cells. An automated image analysis pipeline (described below) enabled for the time-resolved quantification of energy metabolism parameters at the single-cell level (**Fig.2C**). 
+We monitored, using widefield fluorescence microscopy, several metabolic parameters in intact living astrocytes in several fields of view (**Fig. 2A**) and challenged by a transient stimulation using Glutamate, a molecule released by most of the excitatory neurons (**Fig.2B**). To identify and normalize or calibrate individual individual, you need to acquire at least two channels: 1) The fluorescence biosensor channel(s) and 2) A spectrally separable probe for the nuclei (in this study, we used a far-red dye for living cells). In addition, we used a parameter specific normalisation condition to be able to compare cells between each other.
 
 ![Fig. 2](Figure_2.jpeg)
-**Figure 2**: (**A**) Up to six fields of view are monitored per field of view, corresponding 250 to 1000 astrocytes per experiment. (**B**) Summary of experimental settings to evaluate the effect of glutamate on energy metabolism in cultured astrocytes. The same protocol was used for all experiments: after a baseline recording, astrocytes were stimulated 2min with Glutamate (200µM) and recovering was monitored. The parameter-specific normalisation condition was then applied. (**C**) Analysis pipeline to infer sorted calibrated intensity plots from raw image data. For data visualisation, cells are sorted according to basal value (y axis) and the normalised intensity is color-coded and displayed along the time (x axis).
+**Figure 2**: (**A**) Up to six fields of view are monitored per field of view, corresponding 250 to 1000 astrocytes per experiment. (**B**) Summary of experimental settings to evaluate the effect of glutamate on energy metabolism in cultured astrocytes. The same protocol was used for all experiments: after a baseline recording, astrocytes were stimulated 2min with Glutamate (200µM) and recovering was monitored. The parameter-specific normalisation condition was then applied.
 
 ## Results
 
@@ -43,7 +43,10 @@ Together, our results suggest that astrocytes organize in clusters of metabolica
 
 ## Code
 
-Prerequisite: 
+Workflow: The Figure 7 illustrates the analysis pipeline to infer sorted calibrated intensity plots from raw image data. For data visualisation, cells are sorted according to basal value (y axis) and the normalised intensity is color-coded and displayed along the time (x axis).
+
+![Fig. 7](Figure_7.jpeg)
+**Figure 7**: Analysis pipeline.
 
 ## Acknowledgments
 
