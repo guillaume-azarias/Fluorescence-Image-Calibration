@@ -59,7 +59,7 @@ Software: The macros were developed on [Fiji](https://fiji.sc/) (version 2.0.0-r
 ### Processing Macros
 
 #### 1 - High quality images for segmentation (Fiji / ImageJ)
-[a_High_Quality_Image](a_High_Quality_Image.jpeg)
+![a_High_Quality_Image](a_High_Quality_Image.jpeg)
 
 - Input: Image series of baseline recording (normalized names) and fluorescence background images
 
