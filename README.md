@@ -48,18 +48,76 @@ Together, our results suggest that astrocytes organize in clusters of metabolica
 The Figure 7 illustrates the analysis pipeline to infer sorted calibrated intensity plots from raw image data. For data visualisation, cells are sorted according to basal value (y axis) and the normalised intensity is color-coded and displayed along the time (x axis).
 
 ![Fig. 7](Figure_7.jpeg)
-**Figure 7**: Analysis pipeline.
+**Figure 7**: Analysis pipeline to convert raw imaging data into single-cell calibrated time-series data.
 
 ### Prerequisites
 
 Data format: The imaging data were stored as tif files
 Data names: Make sure that your data names contain *two-digits numbers* to allow for time series analysis.
+Software: The macros were developed on [Fiji](https://fiji.sc/) (version 2.0.0-rc69/1.52p), [CellProfiler](https://cellprofiler.org/) (version 2.2.0) and [MATLAB](https://www.mathworks.com/products/matlab.html) (version 2017a).
 
-### Macros
+### Processing Macros
 
-#### High quality images for segmentation
+#### 1 - High quality images for segmentation (Fiji / ImageJ)
+[a_High_Quality_Image](a_High_Quality_Image.jpeg)
 
+- Input: Image series of baseline recording (normalized names) and fluorescence background images
 
+- Processing steps:
+	- Background subtraction
+	- Motion correction
+	- z-stack of fluorescent dye
+
+- Output: Single image for cell segmentation (high quality image)
+
+#### 2 - Cell segmentation (CellProfiler)
+
+- Input: Single image for cell segmentation + nuclear staining image
+
+- Processing steps: Segmentation of high quality image
+
+- Output: Segmented cells coordinates
+
+#### 3 - Generation of normalized images (Fiji / ImageJ)
+
+- Input: Image series of raw data (time point of normalization step)
+
+- Processing steps:
+	- Motion correction
+	- Generation of a mask from the cell segmentation
+	- Calculation of images during calibration/normalization
+	- Filtering of pixels of aberrant value
+	- Generation of a stack containing the normalized data and cell coordinates
+
+- Output: Normalized image series
+
+#### 4 - Measuring the normalized single-cell time course (CellProfiler)
+
+- Input: Normalized image series + segmented cells coordinates
+
+- Processing steps: Measurement of single cell and single time point data
+
+- Output: csv file of time courses and image stack of normalized cell values
+
+### Output Macros
+
+#### 1 - Movie of normalized cell values (Fiji / ImageJ)
+
+- Input: Image stack of normalized cell values
+
+- Processing steps: Creation of a movie from CellProfiler image data
+
+- Output: Movie of normalized cell values (time series)
+
+#### 2 - Graphics of single cell values (MATLAB)
+
+- Input: csv file of time courses from CellProfiler
+
+- Processing steps:
+	- Transposition of csv data into a data matrix
+	- Graphic representation
+
+- Output: Graphic of single cell normalized values and interquartile range
 
 ## Acknowledgments
 
