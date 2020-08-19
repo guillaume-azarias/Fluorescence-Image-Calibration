@@ -100,6 +100,8 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 
 #### 3 - Generation of normalized images (Fiji / ImageJ)
 ![c_Calibration_and_Composite](c_Calibration_and_Composite.jpeg)
+![c_Calibration_and_Composite2](c_Calibration_and_Composite_2.jpeg)
+![c_Calibration_and_Composite3](c_Calibration_and_Composite_3.jpeg)
 
 - Input: Image series of raw data (time point of normalization step)
 
