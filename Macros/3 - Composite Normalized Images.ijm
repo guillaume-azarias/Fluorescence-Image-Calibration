@@ -1,45 +1,33 @@
 /*
- * The Burger King macro suite: version 2016 12 16
  * 
- * Step 1: 	Use the Automator macro "The sequentielor" to rename the first 10 images
- *          	1, 2, 3, etc into 01, 02, 03, etc.
- * Step 2: 	The macro "Burger King_Big King" makes a Z-stack average of images 
+ * General workflow:
+ * 
+ * Step 1: 	The macro "a_High Quality Images" makes a Z-stack average of images 
  *          	to improve the images used by CellProfiler.
- * Step 3: 	The CellProfiler pipeline "Burger King - Cheeseburger" segments
+ * Step 2: 	The CellProfiler pipeline "2 - Cell_Segmentation_Example" segments
  *          	the cells and identify the cell-specific mitochondrial regions.
- * Step 4: 	The Fiji macro "Burger King_Hamburger" creates a composite of
- *          	a stack of Marker images merged with the result of CP mitochondria regions.
- * Step 5 	The CellProfiler pipeline "Burger King-Whooper" loops the intensity measurement
+ * Step 4: 	The Fiji macro "c_Composite Normalized Images" creates a composite of
+ *          	a Normalized probe images merged with the result of CP mitochondria regions.
+ * Step 5 	The CellProfiler pipeline "d_Intensity Measurement" loops the intensity measurement
  *          	of cell-specific mitochondria regions and exports it in a Excel file.
  *          	Note that the CP stack is set to 61 images. Modify the code or make it
  *          	adaptive if relevant
- * Step 6: 	The R macro "Convert_to_wide.R" transposes the Excel table.
  *
  * Technical notes:
- * -----------------------------------------------------------------------------------------
- * This script is designed for folders of the following structure: A single input folder
- * contains for each field of view:
- * 		- 1 image ending by _mito_outlines.tiff (this is the Cheeseburger file)
- * 		- all experimental images 
- * Note that no Big King file should be present.
- * 
- * -----------------------------------------------------------------------------------------
- * 
- * Step 1: 	You may use option + command + C to copy the file path and file name as a
- * 			text (an Automator Service Workflow created on 2015 12 13 valid in the Finder
- * 			and to which I added a shortcut in the keyboard System Preference.
+ * Step 1: 	Make sure that your images are in a two-digit format.
  * Step 2:	The CellProfiler segmentation works better works better if you substract 
  * 			the background, even if, optically, the cells appear easier to segment
  * 			without background substraction.
  * Step 4: 	The structure of the folder is important: it must be in the 
  * 			following order: first the mito-outlines.tiff file, then the Big King
  * 			result and finally the series of experimental images.
+ * 		
  */
 
 run("Close All");
 
 // Dialog box for the input parameters
-Dialog.create("              The Burger King macro suite: Hamburger (normalized) ");
+Dialog.create("              Normalization of images and Generation of composite images ");
 Dialog.addMessage("Step 4/6: Do a composite stack of normalized and CP images to loop the object measurements\n                                   in CellProfiler.\n")
 Dialog.addString("Label for the marker: ", "Rhod123", 10);
 Dialog.addString("Marker background picture: ", "/Users/guillaume/Documents/Results/Resources/Background pictures/20x/FITC 150ms ND 025.TIF", 50);
@@ -93,7 +81,7 @@ ipfov=nSlices/fov;
 check_ipfov = floor(ipfov);
 
 		if (check_ipfov != ipfov) {
- 		   exit("Correct the indicated numbers of images per field of view to match with the extracted stack\nThis script is designed for folders of the following structure: A single input folder\ncontains for each field of view:\n 		- 1 image ending by _mito_outlines.tiff (this is the Cheeseburger file)\n 		- all experimental images\nNote that no Big King file should be present.");
+ 		   exit("Correct the indicated numbers of images per field of view to match with the extracted stack\nThis script is designed for folders of the following structure: A single input folder\ncontains for each field of view:\n 		- 1 image ending by _mito_outlines.tiff \n 		- all experimental images\nNote that no Big King file should be present.");
 		}
 
 //------------------------------ Making the Marker stacks ------------------------------
@@ -273,7 +261,7 @@ setBatchMode(false);
 //------------------------------ Greeting message ------------------------------
 delta_t = floor((getTime-t)/1000);
 beep();
-Dialog.create("The Burger King macro suite: Hamburger");
+Dialog.create("Processing completed");
 Dialog.addMessage("\n            All good :-)                ");
 if (delta_t<60) 
 	Dialog.addMessage("\nComputing time: " + delta_t + "sec");

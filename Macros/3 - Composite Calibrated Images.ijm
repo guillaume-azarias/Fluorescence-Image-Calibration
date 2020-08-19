@@ -3,7 +3,7 @@
  * 
  * Step 1: 	The macro "a_High Quality Images" makes a Z-stack average of images 
  *          	to improve the images used by CellProfiler.
- * Step 2: 	The CellProfiler pipeline "b_Cell Segment" segments
+ * Step 2: 	The CellProfiler pipeline "2 - Cell_Segmentation_Example" segments
  *          	the cells and identify the cell-specific mitochondrial regions.
  * Step 4: 	The Fiji macro "c_Composite Calibrated Images" creates a composite of
  *          	a calibrated probe images merged with the result of CP mitochondria regions.
@@ -28,7 +28,7 @@ run("Close All");
 
 // Parameters
 
-Dialog.create("              The Burger King macro suite: Hamburger (calibrated) ");
+Dialog.create("              Calibration of images and Generation of composite images ");
 Dialog.addMessage("Step 4/6: Do a composite stack of calibrated and CP images to loop\n                      the object measurements in CellProfiler.\n");
 fov_number_array = newArray("Automatic detection", "User defined:");
 Dialog.addRadioButtonGroup("\nMethod to determine the number of fields of view:", fov_number_array, 1, 2, "Automatic detection");
@@ -57,6 +57,7 @@ Dialog.addCheckbox("Use Image Stabilizer to stabilize the stack", false);
 Dialog.addCheckbox("Store 32-bit files", true);
 
 Dialog.show();
+
 // Parameters for the number of fields of view (fov)
 fov_parameter = Dialog.getRadioButton;
 fov = Dialog.getNumber();
@@ -77,15 +78,11 @@ store_32_bits = Dialog.getCheckbox();
 
 // Choosing the input and output folder
 
-
 setOption("JFileChooser", true);
 input = getDirectory("Folder containing the average images, cell regions and experimental images");
 output = getDirectory("Target folder where you want to store the merged stack");
 setOption("JFileChooser", false);
 
-
-//input = "/Users/guillaume/Documents/Results/Mitochondrial ROS in vitro/Glutamate effect/Cheeseburger files and data/20160216z2/";
-//output = "/Users/guillaume/Documents/Results/Mitochondrial ROS in vitro/Glutamate effect/Hamburger files/20160216z2/";
 
 //------------------------------ Enters the BatchMode ------------------------------
 t=getTime();
@@ -469,7 +466,7 @@ setBatchMode(false);
 
 // ----------------------------- Greeting message ------------------------------
 delta_t = floor((getTime-t)/1000);
-Dialog.create("The Burger King macro suite: Hamburger");
+Dialog.create("Processing completed");
 Dialog.addMessage("\n                                     All good :-)                \n");
 if (delta_t<60) 
 	Dialog.addMessage("Computing time: " + delta_t + "sec");

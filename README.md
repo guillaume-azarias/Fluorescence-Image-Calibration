@@ -99,17 +99,29 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 *Example of segmentation result: Original high quality image (left) and cell segmentation results in arbitrary colors (right)*
 
 #### 3 - Generation of normalized images (Fiji / ImageJ)
+![c_Calibration_and_Composite](c_Calibration_and_Composite.jpeg)
 
 - Input: Image series of raw data (time point of normalization step)
 
 - Processing steps:
-	- Motion correction
-	- Generation of a mask from the cell segmentation
-	- Calculation of images during calibration/normalization
-	- Filtering of pixels of aberrant value
+	- Motion correction (*optional*)
+	- Generation of a mask from the cell segmentation result
+	- Calculation of pixel values according to the image processing mode:
+        * Calibration according to known pixel values (0 and 20µM of H2O2)
+        * Normalization to a specific condition (example: no ATP level, no mitochondrial electrical potential)
+        * Ratio between two images
+	- Filtering of pixels of aberrant value (user-defined using a live graphical user interface)
 	- Generation of a stack containing the normalized data and cell coordinates
 
-- Output: Normalized image series
+- Two outputs:
+	- Composite stack containing the raw image containing in the red channel and cell segmentation results and in the green channel. The pixel values are the same as the raw images, since the single-cell calibration will be processed later in Matlab.
+	- Stack of calibrated cells for data exploration. The pixel value is calibrated according to the lower and higher calibration points. In the shown example, a region of interest was drawn around a cell and the time course of the experiment could be shown using the Plot Z-axis profile in Fiji. The live function allowed to move the region of interest to rapidly show the specific time course of different cells.
+
+- Example:
+![c_Calibration_and_Composite Example](c_Calibration_and_Composite_Example.jpeg)
+*Example of composite stack to be further processed by CellProfiler.*
+![calibrate](c_Calibration_and_Composite_example_calibrated.jpeg)
+*Example of calibrated stack. The experimental protocol was the following: baseline (images 1-8), glutamate stimulation (images 9-16), recovery (images 17-50), H2O2 depletion (images 50-70), H2O2 20µM (images 71-90).
 
 #### 4 - Measuring the normalized single-cell time course (CellProfiler)
 

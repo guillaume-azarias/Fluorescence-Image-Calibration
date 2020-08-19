@@ -1,30 +1,29 @@
 /*
- * The Burger King macro suite: version 2017 04 18
  * 
- * Step 1: 	Use the Automator macro "The sequentielor" to rename the first 10 images
- *          	1, 2, 3, etc into 01, 02, 03, etc.
- * Step 2: 	The macro "Burger King_Big King" makes a Z-stack average of images 
+ * General workflow:
+ * 
+ * Step 1: 	The macro "a_High Quality Images" makes a Z-stack average of images 
  *          	to improve the images used by CellProfiler.
- * Step 3: 	The CellProfiler pipeline "Burger King - Cheeseburger" segments
+ * Step 2: 	The CellProfiler pipeline "2 - Cell_Segmentation_Example" segments
  *          	the cells and identify the cell-specific mitochondrial regions.
- * Step 4: 	The Fiji macro "Burger King_Hamburger" creates a composite of
- *          	a stack of FITC images merged with the result of CP mitochondria regions.
- * Step 5 	The CellProfiler pipeline "Burger King-Whooper" loops the intensity measurement
+ * Step 4: 	The Fiji macro "c_Composite Raw Images" creates a composite of
+ *          	a raw images merged with the result of CP mitochondria regions.
+ * Step 5 	The CellProfiler pipeline "d_Intensity Measurement" loops the intensity measurement
  *          	of cell-specific mitochondria regions and exports it in a Excel file.
- * Step 6: 	The Matlab scripts csv_to_struct_converter.mlx, myStruct_to_MegaTable_converter.mlx
- * 				and Plotting_script_Megatable_with_correction.mlx transform the csv files into
- * 				graphics.
+ *          	Note that the CP stack is set to 61 images. Modify the code or make it
+ *          	adaptive if relevant
  *
  * Technical notes:
- * Step 1: 	You may use option + command + C to copy the file path and file name as a
- * 			text (an Automator Service Workflow created on 2015 12 13 valid in the Finder
- * 			and to which I added a shortcut in the keyboard System Preference.
+ * Step 1: 	Make sure that your images are in a two-digit format.
  * Step 2:	The CellProfiler segmentation works better works better if you substract 
  * 			the background, even if, optically, the cells appear easier to segment
  * 			without background substraction.
  * Step 4: 	The structure of the folder is important: it must be in the 
  * 			following order: first the mito-outlines.tiff file, then the Big King
  * 			result and finally the series of experimental images.
+ * 		
+ * Version 2017 04 18
+ * 
  */
  
 run("Close All");
@@ -32,8 +31,6 @@ if (isOpen("Log")) {
          selectWindow("Log"); 
          run("Close"); 
      }
-     
-showStatus("Welcome to Burger King: Hamburger");
 
 // Select the input and output folders
 
@@ -41,13 +38,8 @@ setOption("JFileChooser", true);
 input = getDirectory("Choose your input directory");
 output = getDirectory("Choose your output directory");
 setOption("JFileChooser", false);
-
-/*
-input = "/Users/guillaume/Documents/Results/Cellular ATP in vitro/Magnesium Green/Glutamate + PFK15/Cheeseburger files and data/20161215z4/";
-output = "/Users/guillaume/Documents/Results/Cellular ATP in vitro/Magnesium Green/Glutamate + PFK15/Hamburger files/";
-*/
-
 setBatchMode(true);
+
 // Measure the number of fields of view and store the names of the stacks in the array title[i]
 run("Image Sequence...", "open=["+ input +"] file=01.");
 fov = nSlices;
@@ -100,7 +92,7 @@ number_of_images = nSlices;
 images_per_experiment = number_of_images/fov;
 
 // Select the parameters
-Dialog.create("              The Burger King macro suite: Hamburger              ");
+Dialog.create("              Generation of composite images using raw images");
 Dialog.addMessage("Step 4/6: Do a composite stack of experimental and segmentation images to loop the object measurements in CellProfiler.")
 
 if (fov == 1) {
@@ -239,7 +231,7 @@ setBatchMode(false);
 
 // ------------------------------ Greeting message ------------------------------
 delta_t = floor((getTime-t)/1000);
-Dialog.create("The Burger King macro suite: Hamburger");
+Dialog.create("Procesing completed");
 Dialog.addMessage("\n            All good :-)                ");
 if (delta_t<60) 
 	Dialog.addMessage("\nComputing time: " + delta_t + "sec");
