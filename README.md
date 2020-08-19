@@ -2,6 +2,10 @@
 
  *Translate raw imaging data into statistical analysis of cell-to-cell heterogeneity of a cellular population*
  
+ ![Movie example](e_Movie_maker_example.gif)
+ ![Example graphs](f_Example_Graphs.jpeg)
+ 
+ 
 ## Biological background
 
 Cells are located in a dynamically changing environment characterized by spatio-temporel gradients of signaling molecules and physico-chemical constraints. Therefore, cells exhibit dramatically different shapes and metabolic activities. A striking example of the shape diversity of cells is for instance the dendritic arborization of neurons. Like trees, no one is the same as the others.
