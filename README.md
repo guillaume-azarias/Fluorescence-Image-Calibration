@@ -80,7 +80,7 @@ Software: The macros were developed on [Fiji](https://fiji.sc/) (version 2.0.0-r
 - Output: Single high quality image for cell segmentation
 
 #### 2 - Cell segmentation (CellProfiler)
-![b_Cell Segmentation](b_Cell Segmentation.jpeg)
+![b_Cell Segmentation](b_Cell_Segmentation.jpeg)
 
 - Input: Single high quality image + nuclear staining image
 
