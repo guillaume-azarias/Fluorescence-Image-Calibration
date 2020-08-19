@@ -118,9 +118,9 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 	- Stack of calibrated cells for data exploration. The pixel value is calibrated according to the lower and higher calibration points. In the shown example, a region of interest was drawn around a cell and the time course of the experiment could be shown using the Plot Z-axis profile in Fiji. The live function allowed to move the region of interest to rapidly show the specific time course of different cells.
 
 - Example:
-
-![Composite Example](c_Calibration_and_Composite_Example.jpeg)
+![Composite Example](c_Calibration_and_Composite_example.jpeg)
 *Example of composite stack to be further processed by CellProfiler.*
+
 ![calibrate](c_Calibration_and_Composite_example_calibrated.jpeg)
 *Example of calibrated stack. The experimental protocol was the following: baseline (images 1-8), glutamate stimulation (images 9-16), recovery (images 17-50), H2O2 depletion (images 50-70), H2O2 20µM (images 71-90).
 
