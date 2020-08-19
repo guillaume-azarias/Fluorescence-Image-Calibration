@@ -99,7 +99,7 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 *Example of segmentation result: Original high quality image (left) and cell segmentation results in arbitrary colors (right)*
 
 #### 3 - Generation of normalized images (Fiji / ImageJ)
-![c_Calibration_and_Composite](c_Calibration_and_Composite_3.jpeg)
+![gui Calibration](c_Calibration_and_Composite.jpeg)
 
 - Input: Image series of raw data (time point of normalization step)
 
@@ -119,7 +119,7 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 
 - Example:
 
-![Calibration_and_Composite_Example](c_Calibration_and_Composite_Example.jpeg)
+![Composite Example](c_Calibration_and_Composite_Example.jpeg)
 *Example of composite stack to be further processed by CellProfiler.*
 ![calibrate](c_Calibration_and_Composite_example_calibrated.jpeg)
 *Example of calibrated stack. The experimental protocol was the following: baseline (images 1-8), glutamate stimulation (images 9-16), recovery (images 17-50), H2O2 depletion (images 50-70), H2O2 20µM (images 71-90).
