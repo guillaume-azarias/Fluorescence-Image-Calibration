@@ -2,7 +2,6 @@
 
  *Translate raw imaging data into statistical analysis of cell-to-cell heterogeneity of a cellular population*
  
-***
 ## Biological background
 
 Cells are located in a dynamically changing environment characterized by spatio-temporel gradients of signaling molecules and physico-chemical constraints. Therefore, cells exhibit dramatically different shapes and metabolic activities. A striking example of the shape diversity of cells is for instance the dendritic arborization of neurons. Like trees, no one is the same as the others.
@@ -137,7 +136,8 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 
 - Output: csv file of time courses and image stack of normalized cell values
 
-
+- Result:
+![test](giphy.gif)
 
 #### 1 - Movie of normalized cell values (Fiji / ImageJ)
 
@@ -157,8 +157,13 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 
 - Output: Graphic of single cell normalized values and interquartile range
 
-## Acknowledgments
-
+***
+## Acknowledgment
 Haissa de Castro Abrantes (University of Lausanne) has prepared and maintained the culture of mouse cortical astrocytes. Critical inputs on the experimental design of the study were provided by Bruno Weber (University of Zurich) and Jean-Yves Chatton (University of Lausanne). This work was supported by SystemsX.ch.
+
+## Citation
+If you want to cite this work, you can refer to:
+- project link: https://github.com/guillaume-azarias/Cell-to-cell-Heterogeneity
+- abstract: Glutamate reduces the cell-to-cell variability in energy metabolism in astrocytes, G Azarias, H Abrantes, JY Chatton, B Weber - Glia, 2017
 
 For more information, please contact Guillaume Azarias (guillaume.azarias@hotmail.com)
