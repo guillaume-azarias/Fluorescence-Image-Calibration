@@ -126,8 +126,8 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 
 ### Data Visualization Macros
 
-#### Movie of color-coded single cells
-##### Generation of color-coded images
+#### 1 - Movie of color-coded single cells
+##### a - Generation of color-coded images  (CellProfiler)
 ![d_Color_coded_cells](d_Color_coded_cells.jpeg)
 
 - Input: Composite stack
@@ -136,16 +136,32 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 
 - Output: csv file of time courses and image stack of normalized cell values
 
-- Result:
-![test](giphy.gif)
+- Result: Images of color-coded cells in a target folder. Note that the images from different experiments will be pooled in the same folder with an increasing numeric ID added at the end of the folder name. For instance, 90-images experiments will end with the numbers 001 to 090 for the first movie, 091 to 180 for the second movie, 181 to 270 for the third movie etc.
 
-#### 1 - Movie of normalized cell values (Fiji / ImageJ)
+- Example
+![d_Color_coded_cells example](d_Color_coded_cells_example.jpeg)
+*Example of color-coded calibrated image. Cold and warm color indicate low and high H2O2 concentrations, respectively.*
 
-- Input: Image stack of normalized cell values
+##### b - Generation of movies (Fiji / ImageJ)
+![Movie maker](e_Movie_maker.jpeg)
 
-- Processing steps: Creation of a movie from CellProfiler image data
+- Input: Folder of color-coded images
 
-- Output: Movie of normalized cell values (time series)
+- Processing steps:
+	- Analysis of the number of field of view
+	- Crop image (*optional*)
+	- Stamp time, stimulation and calibration condition (*optional*)
+	- Select specific begin and end of the movie (*optional*)
+	- Make an avi file for each experiment.
+
+- Output: csv file of time courses and image stack of normalized cell values
+
+- Result: Images of color-coded cells in a target folder. Note that the images from different experiments will be pooled in the same folder with an increasing numeric ID added at the end of the folder name. For instance, 90-images experiments will end with the numbers 001 to 090 for the first movie, 091 to 180 for the second movie, 181 to 270 for the third movie etc.
+
+- Example
+![d_Color_coded_cells example](d_Color_coded_cells_example.jpeg)
+*Example of color-coded calibrated image. Cold and warm color indicate low and high H2O2 concentrations, respectively.*
+![Movie example](e_Movie_maker_example.gif)
 
 #### 2 - Graphics of single cell values (MATLAB)
 
@@ -167,3 +183,4 @@ If you want to cite this work, you can refer to:
 - abstract: Glutamate reduces the cell-to-cell variability in energy metabolism in astrocytes, G Azarias, H Abrantes, JY Chatton, B Weber - Glia, 2017
 
 For more information, please contact Guillaume Azarias (guillaume.azarias@hotmail.com)
+![test](giphy.gif)
