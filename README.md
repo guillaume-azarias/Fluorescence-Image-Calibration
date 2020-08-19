@@ -13,7 +13,7 @@ In this work, we have investigated if non-neuronal cells called astrocytes produ
 
 ## Methods
 
-*Foreword: The goal of this repository is to illustrate how to convert raw imaging data, containing hundreds of cells, into calibrated data that can be statistically studied. The biological relevance is not discussed.*
+*Foreword: The goal of this repository is to illustrate how to convert raw imaging data, containing hundreds of cells, into calibrated data that can be statistically studied. The biological relevance is only briefly discussed.*
 
 We monitored, using widefield fluorescence microscopy, several metabolic parameters in intact living astrocytes in several fields of view (**Fig. 2A**) and challenged by a transient stimulation using Glutamate, a molecule released by most of the excitatory neurons (**Fig.2B**). To identify and normalize or calibrate individual individual, you need to acquire at least two channels: 1) The fluorescence biosensor channel(s) and 2) A spectrally separable probe for the nuclei (in this study, we used a far-red dye for living cells). In addition, we used a parameter specific normalisation condition to be able to compare cells between each other.
 
@@ -77,13 +77,14 @@ Software: The macros were developed on [Fiji](https://fiji.sc/) (version 2.0.0-r
 	- Motion correction
 	- z-stack of fluorescent dye
 
-- Output: Single image for cell segmentation (high quality image)
+- Output: Single high quality image for cell segmentation
 
 #### 2 - Cell segmentation (CellProfiler)
+![b_Cell Segmentation](b_Cell Segmentation.jpeg)
 
-- Input: Single image for cell segmentation + nuclear staining image
+- Input: Single high quality image + nuclear staining image
 
-- Processing steps: Segmentation of high quality image
+- Processing steps: Segmentation of high quality image based on nuclear staining. Note that you have to adapt the detection parameter to your own data.
 
 - Output: Segmented cells coordinates
 
