@@ -88,6 +88,10 @@ Software: The macros were developed on [Fiji](https://fiji.sc/) (version 2.0.0-r
 
 - Output: Segmented cells coordinates
 
+- Example:
+![Cell Segmentation Result](Figure_8.jpeg)
+*Example of segmentation result: Original high quality image (left) and cell segmentation results in arbitrary colors (right) 
+
 #### 3 - Generation of normalized images (Fiji / ImageJ)
 
 - Input: Image series of raw data (time point of normalization step)
