@@ -155,7 +155,9 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 - Output: Avi file of color-coded images where you can set the display speed and annotation features.
 
 - Example
+
 ![Movie example](e_Movie_maker_example.gif)
+
 *Example of annotated color-coded movie indicating the conditions.*
 
 #### 2 - Graphics of single cell values
