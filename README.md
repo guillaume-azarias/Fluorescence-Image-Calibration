@@ -67,6 +67,8 @@ Software: The macros were developed on [Fiji](https://fiji.sc/) (version 2.0.0-r
 
 ### Processing Macros
 
+You find them in Cell-to-cell-Heterogeneity/Macros/
+
 #### 1 - High quality images for segmentation (Fiji / ImageJ)
 ![a_High_Quality_Image](a_High_Quality_Image.jpeg)
 
@@ -79,6 +81,10 @@ Software: The macros were developed on [Fiji](https://fiji.sc/) (version 2.0.0-r
 
 - Output: Single high quality image for cell segmentation
 
+- Example:
+![a_High_Quality_Image_example](a_High_Quality_Image_example.jpeg)
+*Example of segmentation result: Single image (left) and  high quality image (right)*
+
 #### 2 - Cell segmentation (CellProfiler)
 ![b_Cell Segmentation](b_Cell_Segmentation.jpeg)
 
@@ -89,8 +95,8 @@ Software: The macros were developed on [Fiji](https://fiji.sc/) (version 2.0.0-r
 - Output: Segmented cells coordinates
 
 - Example:
-![Cell Segmentation Result](Figure_8.jpeg)
-*Example of segmentation result: Original high quality image (left) and cell segmentation results in arbitrary colors (right) 
+![Cell Segmentation Result](b_Cell_Segmentation_example.jpeg)
+*Example of segmentation result: Original high quality image (left) and cell segmentation results in arbitrary colors (right)*
 
 #### 3 - Generation of normalized images (Fiji / ImageJ)
 
