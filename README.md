@@ -1,7 +1,8 @@
 # Cell-to-cell-Heterogeneity
 
  *Translate raw imaging data into statistical analysis of cell-to-cell heterogeneity of a cellular population*
-
+ 
+***
 ## Biological background
 
 Cells are located in a dynamically changing environment characterized by spatio-temporel gradients of signaling molecules and physico-chemical constraints. Therefore, cells exhibit dramatically different shapes and metabolic activities. A striking example of the shape diversity of cells is for instance the dendritic arborization of neurons. Like trees, no one is the same as the others.
@@ -98,7 +99,7 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 ![Cell Segmentation Result](b_Cell_Segmentation_example.jpeg)
 *Example of segmentation result: Original high quality image (left) and cell segmentation results in arbitrary colors (right)*
 
-#### 3 - Generation of normalized images (Fiji / ImageJ)
+#### 3 - Generation of composite stacks (Fiji / ImageJ)
 ![gui Calibration](c_Calibration_and_Composite.jpeg)
 
 - Input: Image series of raw data (time point of normalization step)
@@ -114,8 +115,8 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 	- Generation of a stack containing the normalized data and cell coordinates
 
 - Two outputs:
-	- Composite stack containing the raw image containing in the red channel and cell segmentation results and in the green channel. The pixel values are the same as the raw images, since the single-cell calibration will be processed later in Matlab.
-	- Stack of calibrated cells for data exploration. The pixel value is calibrated according to the lower and higher calibration points. In the shown example, a region of interest was drawn around a cell and the time course of the experiment could be shown using the Plot Z-axis profile in Fiji. The live function allowed to move the region of interest to rapidly show the specific time course of different cells.
+	- Composite stack containing the raw image in the red channel and cell segmentation results and in the green channel. The pixel values are the same as the raw images, since the single-cell calibration will be processed later in Matlab.
+	- Stack of calibrated cells for data exploration. The pixel value is calibrated according to the lower and higher calibration points. In the example below, a region of interest was drawn around a cell and the calibrated values could be shown over time using the Plot Z-axis profile in Fiji. The live function allowed to move the region of interest to rapidly analyse the specific time course of different cells.
 
 - Example:
 ![Composite Example](c_Calibration_and_Composite_example.jpeg)
@@ -124,15 +125,19 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 ![calibrate](c_Calibration_and_Composite_example_calibrated.jpeg)
 *Example of calibrated stack. The experimental protocol was the following: baseline (images 1-8), glutamate stimulation (images 9-16), recovery (images 17-50), H2O2 depletion (images 50-70), H2O2 20µM (images 71-90).
 
-#### 4 - Measuring the normalized single-cell time course (CellProfiler)
+### Data Visualization Macros
 
-- Input: Normalized image series + segmented cells coordinates
+#### Movie of color-coded single cells
+##### Generation of color-coded images
+![d_Color_coded_cells](d_Color_coded_cells.jpeg)
+
+- Input: Composite stack
 
 - Processing steps: Measurement of single cell and single time point data
 
 - Output: csv file of time courses and image stack of normalized cell values
 
-### Output Macros
+
 
 #### 1 - Movie of normalized cell values (Fiji / ImageJ)
 
