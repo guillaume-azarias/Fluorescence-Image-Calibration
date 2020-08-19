@@ -162,7 +162,7 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 
 #### 2 - Graphics of single cell values
 ##### a - Generation of single-cell time course file  (CellProfiler)
-[CellProfiler gui](f_Time_course_Measurement.jpeg)
+![CellProfiler gui](f_Time_course_Measurement.jpeg)
 
 - Input: Composite stack
 
@@ -191,11 +191,17 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
     - Processing steps:
         - Baseline correction
         - Remove the cells that have values outside of the calibration range
+        - Sort the data by increasing average value during basal condition
     - Output: 2D time course and violin plot for distribution analysis
+
+Example:
+![Example graphs](f_Example_Graphs.jpeg)
+*Possibilities to illustrate the time course of a population of cells.*
+
 
 ***
 ## Acknowledgment
-Haissa de Castro Abrantes (University of Lausanne) has prepared and maintained the culture of mouse cortical astrocytes. Critical inputs on the experimental design of the study were provided by Bruno Weber (University of Zurich) and Jean-Yves Chatton (University of Lausanne). This work was supported by SystemsX.ch.
+Haissa de Castro Abrantes (University of Lausanne) has prepared and maintained the culture of mouse cortical astrocytes. Critical inputs on the experimental design of the study were provided by [Bruno Weber](https://www.pharma.uzh.ch/en/research/functionalimaging.html) (University of Zurich) and [Jean-Yves Chatton](https://wwwfbm.unil.ch/dnf/group/imaging-the-neuroglia-metabolic-interplay) (University of Lausanne). This work was supported by SystemsX.ch.
 
 ## Citation
 If you want to cite this work, you can refer to:
@@ -205,4 +211,5 @@ If you want to cite this work, you can refer to:
 For more information, please contact Guillaume Azarias (guillaume.azarias@hotmail.com)
 
 Thank you for reading !
+
 ![test](giphy.gif)
