@@ -1,2 +1,3 @@
-# Cell-to-cell-Heterogenity
- Translate Raw imaging data into statistical analysis of variability of cellular population
+Target folder of the 2 - Cell_Segmentation_Example
+
+Keeping here the segmentation results helps you to optimize your segmentation and review the best results.
