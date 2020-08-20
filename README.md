@@ -65,8 +65,10 @@ The Figure 7 illustrates the analysis pipeline to infer sorted calibrated intens
 
 ### Prerequisites
 
-Data format: The imaging data were stored as tif files
+Data format: The imaging data were stored as tiff files.
 Data names: Make sure that your data names contain *two-digits numbers* to allow for time series analysis.
+Data analysis folder structure: You will find in Cell-to-cell-Heterogeneity/Experiment folder template a possible structure of your data analysis folder. Keeping your data organized helps you to critically review your results and optimize your analysis pipeline. I recommend to use one folder template per group of identical experiments.
+
 Software: The macros were developed on [Fiji](https://fiji.sc/) (version 2.0.0-rc69/1.52p), [CellProfiler](https://cellprofiler.org/) (version 2.2.0) and [MATLAB](https://www.mathworks.com/products/matlab.html) (version 2017a).
 
 ### Processing Macros
@@ -201,6 +203,11 @@ Example:
 ![Example graphs](f_Example_Graphs.jpeg)
 *Possibilities to illustrate the time course of a population of cells.*
 
+## Limitations of the method
+
+- **Reliability of calibrated data**: Since one of the goals of this method was to compare cellular concentration values between each other, a particular attention should be paid to the calibration strategy during image processing. The 2-point calibration strategy may be the more accurate method, assuming that a linear correlation was experimentally demontrated between the pixel value and real concentration. Non-linear correlation would be easy to implement. However, the results of single-point calibration experiments must be interpreted with caution. Yet, it is not always experiementally possible to perform an accurate calibration of fluorescence intensity.
+- **Software integration**: Since this method rely on several pieces of software, an integration of the different part would increase the speed of data analysis.
+- **Open-source**: Numeric data processing and visualization may be done in Python.
 
 ***
 ## Acknowledgment
