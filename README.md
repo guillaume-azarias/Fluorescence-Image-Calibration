@@ -21,10 +21,10 @@ In this work, we have investigated if non-neuronal cells called [astrocytes](htt
 
 *Foreword: The goal of this repository is to illustrate how to convert raw imaging data, containing hundreds of cells, into calibrated data that can be statistically studied. The biological relevance is only briefly discussed.*
 
-We monitored, using widefield fluorescence microscopy, several metabolic parameters in intact living astrocytes in several fields of view (**Fig. 2A**) and challenged by a transient stimulation using Glutamate, a molecule released by most of the excitatory neurons (**Fig.2B**). To identify and normalize or calibrate individual individual, you need to acquire at least two channels: 1) The fluorescence biosensor channel(s) and 2) A spectrally separable probe for the nuclei (in this study, we used a far-red dye for living cells). In addition, we used a parameter specific normalisation condition to be able to compare cells between each other.
+We monitored, using widefield fluorescence microscopy, several metabolic parameters in intact living astrocytes in several fields of view (**Fig. 2A**) and challenged by a transient stimulation using Glutamate, a molecule released by most of the excitatory neurons (**Fig.2B**). To identify and normalize or calibrate individual individual, you need to acquire at least two channels: 1) The fluorescence biosensor channel(s) and 2) A spectrally separable probe for the nuclei (in this study, we used a far-red dye for living cells). In addition, we used a parameter specific normalization condition to be able to compare cells between each other.
 
 ![Fig. 2](Figure_2.jpeg)
-**Figure 2**: (**A**) Up to six fields of view are monitored per field of view, corresponding 250 to 1000 astrocytes per experiment. (**B**) Summary of experimental settings to evaluate the effect of glutamate on energy metabolism in cultured astrocytes. The same protocol was used for all experiments: after a baseline recording, astrocytes were stimulated 2min with Glutamate (200µM) and recovering was monitored. The parameter-specific normalisation condition was then applied.
+**Figure 2**: (**A**) Up to six fields of view are monitored per field of view, corresponding 250 to 1000 astrocytes per experiment. (**B**) Summary of experimental settings to evaluate the effect of glutamate on energy metabolism in cultured astrocytes. The same protocol was used for all experiments: after a baseline recording, astrocytes were stimulated 2min with Glutamate (200µM) and recovering was monitored. The parameter-specific normalization condition was then applied.
 
 ## Results
 ### Summary
@@ -44,7 +44,7 @@ We found that, at resting state, astrocytes are heterogeneous in cellular ATP le
 ### Glutamate decreases the variability in mitochondrial electrical potential
 
 ![Fig. 5](Figure_5.jpeg)
-**Figure 5**: (**5**) Representation of mitochondrial electrical potential measured using the Rhodamine 123 chemical dye and using the mitochondrial uncoupler as a normalizing condition. (**B**) Color-coded representation of single cell dynamic. (**C**) Representative experiment and (**D**) whole dataset representation of variability index. In our dataset, glutamate did not systematically lead to a significant decrease in cell-to-cell variability.
+**Figure 5**: (**A**) Representation of mitochondrial electrical potential measured using the Rhodamine 123 chemical dye and using the mitochondrial uncoupler as a normalizing condition. (**B**) Color-coded representation of single cell dynamic. (**C**) Representative experiment and (**D**) whole dataset representation of variability index. In our dataset, glutamate did not systematically lead to a significant decrease in cell-to-cell variability.
 
 ### Glutamate decreases the variability in mitochondrial Reactive Oxygen Species concentration
 
@@ -60,7 +60,7 @@ Together, our results suggest that astrocytes organize in clusters of metabolica
 
 ### Workflow
 
-The Figure 7 illustrates the analysis pipeline to infer sorted calibrated intensity plots from raw image data. For data visualisation, cells are sorted according to basal value (y axis) and the normalised intensity is color-coded and displayed along the time (x axis).
+The Figure 7 illustrates the analysis pipeline to infer sorted calibrated intensity plots from raw image data. For data visualisation, cells are sorted according to basal value (y axis) and the normalized intensity is color-coded and displayed along the time (x axis).
 
 ![Fig. 7](Figure_7.jpeg)
 **Figure 7**: Analysis pipeline to convert raw imaging data into single-cell calibrated time-series data.
@@ -68,7 +68,9 @@ The Figure 7 illustrates the analysis pipeline to infer sorted calibrated intens
 ### Prerequisites
 
 Data format: The imaging data were stored as tiff files.
+
 Data names: Make sure that your data names contain *two-digits numbers* to allow for time series analysis.
+
 Data analysis folder structure: You will find in Cell-to-cell-Heterogeneity/Experiment folder template a possible structure of your data analysis folder. Keeping your data organized helps you to critically review your results and optimize your analysis pipeline. I recommend to use one folder template per group of identical experiments.
 
 Software: The macros were developed on [Fiji](https://fiji.sc/) (version 2.0.0-rc69/1.52p), [CellProfiler](https://cellprofiler.org/) (version 2.2.0) and [MATLAB](https://www.mathworks.com/products/matlab.html) (version 2017a).
