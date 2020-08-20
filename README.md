@@ -4,7 +4,7 @@
  
  ![Movie example](e_Movie_maker_example.gif)
  
- (Color-coded concentration of H<sub>2</sub>O<sub>2</sub> in cultured cells. Dark blue=0µM H<sub>2<sub>O<sub>2<sub>. Dark red=20µM H<sub>2<sub>O<sub>2<sub>)
+ (Color-coded concentration of H<sub>2</sub>O<sub>2</sub> in cultured cells. Dark blue=0µM H<sub>2</sub>O<sub>2</sub>. Dark red=20µM H<sub>2</sub>O<sub>2</sub>)
  ![Example graphs](f_Example_Graphs.jpeg)
  
  
@@ -115,7 +115,7 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 	- Motion correction (*optional*)
 	- Generation of a mask from the cell segmentation result
 	- Calculation of pixel values according to the image processing mode:
-        * Calibration according to known pixel values (0 and 20µM of H<sub>2<sub>O<sub>2<sub>)
+        * Calibration according to known pixel values (0 and 20µM of H<sub>2</sub>O<sub>2</sub>)
         * Normalization to a specific condition (examples: no ATP level, no mitochondrial electrical potential)
         * Ratio between two images
 	- Filtering of pixels of aberrant value (user-defined using a live graphical user interface)
@@ -130,7 +130,7 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 *Example of composite stack to be further processed by CellProfiler.*
 
 ![calibrate](c_Calibration_and_Composite_example_calibrated.jpeg)
-*Example of calibrated stack. The experimental protocol was the following: baseline (images 1-8), glutamate stimulation (images 9-16), recovery (images 17-50), H<sub>2<sub>O<sub>2<sub> depletion (images 50-70), H<sub>2<sub>O<sub>2<sub> 20µM (images 71-90).*
+*Example of calibrated stack. The experimental protocol was the following: baseline (images 1-8), glutamate stimulation (images 9-16), recovery (images 17-50), H<sub>2</sub>O<sub>2</sub> depletion (images 50-70), H<sub>2</sub>O<sub>2</sub> 20µM (images 71-90).*
 
 ### Data Visualization Macros
 
@@ -146,7 +146,7 @@ You find them in Cell-to-cell-Heterogeneity/Macros/
 
 - Example
 ![d_Color_coded_cells example](d_Color_coded_cells_example.jpeg)
-*Example of color-coded calibrated image. Cold and warm color indicate low and high H<sub>2<sub>O<sub>2<sub> concentrations, respectively.*
+*Example of color-coded calibrated image. Cold and warm color indicate low and high H<sub>2</sub>O<sub>2</sub> concentrations, respectively.*
 
 ##### b - Generation of movies (Fiji / ImageJ)
 ![Movie maker](e_Movie_maker.jpeg)
