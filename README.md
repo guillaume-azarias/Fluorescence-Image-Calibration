@@ -4,7 +4,7 @@
  
  ![Movie example](e_Movie_maker_example.gif)
  
- (Color-coded concentration of H<sub>2<sub>O<sub>2<sub> in cultured cells. Dark blue=0µM H<sub>2<sub>O<sub>2<sub>. Dark red=20µM H<sub>2<sub>O<sub>2<sub>)
+ (Color-coded concentration of H<sub>2</sub>O<sub>2</sub> in cultured cells. Dark blue=0µM H<sub>2<sub>O<sub>2<sub>. Dark red=20µM H<sub>2<sub>O<sub>2<sub>)
  ![Example graphs](f_Example_Graphs.jpeg)
  
  
