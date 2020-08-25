@@ -2,6 +2,4 @@
 * text=auto
 
 # Language detection from https://stackoverflow.com/questions/13597892/how-to-change-the-language-of-a-repository-on-github#27099628
-Macros/* linguist-vendored
-Cell-to-cell-Heterogeneity/Macros/* linguist-vendored
-# *.mlx linguist-language=Java
+Macros/* linguist-documentation
