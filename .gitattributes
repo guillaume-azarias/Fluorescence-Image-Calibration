@@ -2,12 +2,12 @@
 * text=auto
 
 # Detection of languages: these options did not allow to detect the language in a subfolder
-* linguist-vendored
-*.js linguist-vendored=false
-*.mlx linguist-vendored=false
-*.ijm linguist-vendored=false
-*.mlx           text diff=matlab
-Macros/*.mlx           text diff=matlab
+# * linguist-vendored
+# *.js linguist-vendored=false
+# *.mlx linguist-vendored=false
+# *.ijm linguist-vendored=false
+# *.mlx           text diff=matlab
+# Macros/*.mlx           text diff=matlab
 
 *.mlx linguist-language=matlab
 
