@@ -3,7 +3,7 @@
 
 # Detection of languages: overriding linguist
 *.mlx linguist-language=matlab
-*.ijm linguist-language=ImageJ macros.
+*.ijm linguist-language=ImageJ
 
 # Auto detect text files and perform LF normalization
 * text=auto
