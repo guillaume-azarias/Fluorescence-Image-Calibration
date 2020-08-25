@@ -1,15 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Detection of languages: these options did not allow to detect the language in a subfolder
-# * linguist-vendored
-# *.js linguist-vendored=false
-# *.mlx linguist-vendored=false
-# *.ijm linguist-vendored=false
-# *.mlx           text diff=matlab
-# Macros/*.mlx           text diff=matlab
-
+# Detection of languages: overriding linguist
 *.mlx linguist-language=matlab
+*.ijm linguist-language=ImageJ macros.
 
 # Auto detect text files and perform LF normalization
 * text=auto
