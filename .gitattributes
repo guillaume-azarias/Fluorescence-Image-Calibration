@@ -2,4 +2,4 @@
 * text=auto
 
 # Language detection from https://stackoverflow.com/questions/13597892/how-to-change-the-language-of-a-repository-on-github#27099628
-Macros/* linguist-documentation
+Macros/* linguist-detectable=true
