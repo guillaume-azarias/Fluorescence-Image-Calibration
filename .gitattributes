@@ -1,5 +1,10 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Language detection from https://stackoverflow.com/questions/13597892/how-to-change-the-language-of-a-repository-on-github#27099628
-Macros/* linguist-documentation
+# Detection of languages
+* linguist-vendored
+*.js linguist-vendored=false
+*.mlx linguist-vendored=false
+*.ijm linguist-vendored=false
+*.mlx           text diff=matlab
+Macros/*.mlx           text diff=matlab
