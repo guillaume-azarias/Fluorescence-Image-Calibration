@@ -6,3 +6,5 @@
 *.js linguist-vendored=false
 *.mlx linguist-vendored=false
 *.ijm linguist-vendored=false
+*.mlx           text diff=matlab
+Macros/*.mlx           text diff=matlab
