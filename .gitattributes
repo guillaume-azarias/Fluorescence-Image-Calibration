@@ -3,7 +3,7 @@
 
 # Detection of languages: overriding linguist
 *.mlx linguist-language=matlab
-*.ijm linguist-language=ImageJ
+*.ijm linguist-language=Java
 *.cpproj linguist-language=CellProfiler
 
 # Auto detect text files and perform LF normalization
