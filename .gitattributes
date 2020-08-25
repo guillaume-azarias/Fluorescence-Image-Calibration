@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Language detection from http://www.blacktechdiva.com/change-repo-language-github/
+static/* linguist-vendored
