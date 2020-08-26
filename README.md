@@ -69,7 +69,7 @@ The Figure 7 illustrates the analysis pipeline to infer sorted calibrated intens
 
 Data format: The imaging data were stored as tiff files.
 
-Data names: Make sure that your data names contain *two-digits numbers* to allow for time series analysis.
+Data names: Make sure that your data names contain *two-digits numbers* to allow for time series analysis. If most of your images are numbered with 2-digits and the first nine images have 1-digit numbers, you could use the Python script 0 - 2-digit-converter.py to get only 2-digit formatted files.
 
 Data analysis folder structure: You will find in Cell-to-cell-Heterogeneity/Experiment folder template a possible structure of your data analysis folder. Keeping your data organized helps you to critically review your results and optimize your analysis pipeline. I recommend to use one folder template per group of identical experiments.
 
