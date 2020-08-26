@@ -13,51 +13,63 @@
 
 import os
 from tkinter import *
-from tkinter import filedialog
+from tkinter import filedialog, simpledialog
+import regex as re
 
 # Choose the directory to process (from https://www.programcreek.com/python?code=junerain123%2Fjavsdt%2Fjavsdt-master%2Fjavsdt%2Ffunctions_preparation.py)
-
-
-# def choose_directory():
-#     directory_root = Tk()
-#     directory_root.withdraw()
-#     path_work = filedialog.askdirectory(
-#         initialdir='/Users/guillaume/Documents/Projects/Fiji/Cell-to-cell-Heterogenity', title='Select it')
-#     if path_work == '':
-#         print('你没有选择目录! 请重新选：')
-#         sleep(2)
-#         return choose_directory()
-#     else:
-#         # askdirectory 获得是 正斜杠 路径C:/，所以下面要把 / 换成 反斜杠\
-#         return path_work
+def choose_directory():
+    directory_root = Tk()
+    directory_root.withdraw()
+    path_work = filedialog.askdirectory(
+        initialdir='/Users/guillaume/Documents/Projects/Fiji/All macro/Resources/Mitochondrial ROS in vitro', title='Select the Directory to process')
+    if path_work == '':
+        print('你没有选择目录! 请重新选：')
+        sleep(2)
+        return choose_directory()
+    else:
+        # askdirectory 获得是 正斜杠 路径C:/，所以下面要把 / 换成 反斜杠\
+        return path_work
 
 # Ask for the common part of filenames
 def basic_name():
     basename = Tk()
     basename.withdraw()
-    base = askstring('Enter the basic name')
-    if path_work == '':
+    base = simpledialog.askstring(
+        '2-digits filename converter', 'Enter the basic name', initialvalue=example_name)
+    if base == '':
         print('Please enter a valid basic name')
-        sleep(2)
         return basic_name()
     else:
         return base
 
 
-basic_name()
-print(base)
-
-# choose_directory()
-
-path_work = '/Users/guillaume/Documents/Projects/Fiji/All macro/Resources/Mitochondrial ROS in vitro/Glutamate effect/a_Data/20161214z2'
+directory = choose_directory()
+# example_name = '20160404z2_TL_w1FITC_s1_t1'
+example_name = re.split('[.]', os.listdir(directory)[10])[0]
+root_name = basic_name()
+print(root_name)
 
 # Convert 1-digit into 2-digit
-# Split the filename into string, number and extension
-filename = '20160404z2_TL_w1FITC_s1_t1.TIF'
-# temp = re.compile("([a-zA-Z]+)([0-9]+)")
-# res = temp.match(filename).groups()
+path_work = '/Users/guillaume/Documents/Projects/Fiji/All macro/Resources/Mitochondrial ROS in vitro/Dummy'
+# filename = '20160404z2_TL_w1FITC_s1_t1.TIF'
+# root_name = '20160404z2_TL_w1FITC_s1_t'
 
-# print(res)
-# regex = re.compile('[^A-Za-z0-9]')
-# device = regex.sub('', str(device))
+# Loop on each file of the folder
+for filename in enumerate(os.listdir(path_work)):
+    filename = filename[1]
+    # Split the filename into string, number and extension
+    number_and_extension = re.sub(root_name, '', filename)
+    number = re.split('[.]', number_and_extension)[0]
+
+    if len(number) < 2 and number.isdigit():
+        number = int(number) # regex originally generated number as a string
+        two_digit = str('{:02d}'.format(number))
+        
+        # Reconstruct the filename
+        extension = re.split('[.]', number_and_extension)[1]
+        new_filename = root_name + two_digit + extension
+        print('new filename: ' + str(new_filename))
+
+        # Save it
+        os.rename(path_work + '/' + filename, path_work + '/' + new_filename)
 
