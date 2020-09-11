@@ -1,11 +1,16 @@
-### Data ###
+### Files ###
+*.docx
 *.csv
 *.xlsx
 *.key
-*.pptx
 *.pdf
+*.png
+*.pptx
 *.tif
 *.tiff
+
+### Folder ###
+/Out of Git/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
