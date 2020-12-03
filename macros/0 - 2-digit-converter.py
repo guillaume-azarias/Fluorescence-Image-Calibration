@@ -23,11 +23,10 @@ def choose_directory():
     path_work = filedialog.askdirectory(
         initialdir='/Users/guillaume/Documents/Projects/Fiji/All macro/Resources/Mitochondrial ROS in vitro', title='Select the Directory to process')
     if path_work == '':
-        print('你没有选择目录! 请重新选：')
+        print('Please choose a directory !')
         sleep(2)
         return choose_directory()
     else:
-        # askdirectory 获得是 正斜杠 路径C:/，所以下面要把 / 换成 反斜杠\
         return path_work
 
 # Ask for the common part of filenames
